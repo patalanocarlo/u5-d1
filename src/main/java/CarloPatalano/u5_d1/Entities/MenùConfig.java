@@ -42,8 +42,14 @@ public Toppings pineApple(){
     public Toppings Tomato(){
     return new Toppings(20,0.30,"Pomodoro");
     }
-
-
+    @Bean
+    public PizzeXL margheritaXL() {
+        return new PizzeXL("Margherita XL", 8.0, 800, Arrays.asList(cheese(),Tomato()));
+    }
+    @Bean
+    public PizzeXL margheritaConProsciuttoXL() {
+        return new PizzeXL("Margherita XL", 8.0, 800, Arrays.asList(cheese(),ham(),Tomato()));
+    }
 
     @Bean
     public Drink CocaCola(){
@@ -57,7 +63,10 @@ public Toppings pineApple(){
     public Drink Fanta(){
         return new Drink("Aranciata",240,1.99 ,"0.33 cl" );
     }
-
+    @Bean
+    public List<PizzeXL> xlPizzas() {
+        return Arrays.asList(margheritaXL(), margheritaConProsciuttoXL());
+    }
 @Bean
     public Menù menu(){
         List<Pizza> pizzas = Arrays.asList(margherita(), pizzaConAnanas());
