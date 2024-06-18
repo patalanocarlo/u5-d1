@@ -44,7 +44,7 @@ public Toppings pineApple(){
     }
     @Bean
     public PizzeXL margheritaXL() {
-        return new PizzeXL("Margherita XL", 8.0, 800, Arrays.asList(cheese(),Tomato()));
+        return new PizzeXL("Margherita XL", 8.0, 1800, Arrays.asList(cheese(),Tomato()));
     }
     @Bean
     public PizzeXL margheritaConProsciuttoXL() {

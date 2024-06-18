@@ -49,4 +49,13 @@ public class Pizza {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Pizza" +
+                 name + '\'' +
+                ", price=" + price +
+
+
+                '}';
+    }
 }
